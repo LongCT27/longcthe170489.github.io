@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import Landing from './modules/Landing';
+import { HashRouter, Routes, Route } from "react-router-dom";
+import Products from './modules/Products';
+import Header from './partials/Header';
+import Footer from './partials/Footer';
+import Services from './modules/Services';
+import ProductDetail from './modules/ProductDetail';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <html className="App">
+      <header>
+        <Header/>
       </header>
-    </div>
+      
+      <body>
+      
+      <HashRouter>
+      <Routes>
+        <Route path="/" >
+          <Route index element={<Landing />} />
+          <Route path="products" element={<Products/>}/>
+          <Route path="products/:productId" element={<ProductDetail/>}/>
+          <Route path="services" element={<Services/>} />
+        </Route>
+      </Routes>
+    </HashRouter>
+      </body>
+      <Footer/>
+    </html>
   );
 }
 
