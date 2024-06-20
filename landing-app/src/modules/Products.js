@@ -1,8 +1,9 @@
 import Navbar from "../partials/Navbar";
-import HotItems from "../data/hot_products.json";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import allProducts from "../data/products.json"
+import HotProducts from "../partials/HotProducts";
+import "../css/products.css"
 
 const itemsPerPage = 8;
 
@@ -32,58 +33,13 @@ const Products = () => {
 
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <main id="ecommerce">
         <div className="container">
           <div className="row">
             <div className="col-md-3">
               <div className="sidebar_product pt-5">
-                <div class="hot">
-                  <div class="title-bg">
-                    <h2 class=""> Sản phẩm nổi bật </h2>
-                  </div>
-                  <div class="list">
-                    {HotItems.map((item) => (
-                      <div class="card item mb-4">
-                        <div class="row no-gutters align-items-center">
-                          <div class="col-md-4 text-center">
-                            <Link
-                              to={`/products/${item.id}`}
-                              class="no-decoration"
-                            >
-                              <img
-                                class="card-img-top ml-3"
-                                src={item.img}
-                                alt="Den Long Ong Sao Trung Thu"
-                              />
-                            </Link>
-                          </div>
-                          <div class="col-md-8">
-                            <div class="card-body">
-                              <h3 class="card-title">
-                                <Link
-                                  to={`/products/${item.id}`}
-                                  class="no-decoration text-dark"
-                                  style={{ color: "#FF5733" }}
-                                >
-                                  {item.name}
-                                </Link>
-                              </h3>
-                              <p class="card-text price">
-                                <span
-                                  class="woocommerce-Price-amount amount"
-                                  style={{ color: "#007BFF" }}
-                                >
-                                  <bdi>{item.price}</bdi>
-                                </span>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                <HotProducts />
               </div>
             </div>
             <div className="col-md-9 order-first order-md-last ">
@@ -104,30 +60,26 @@ const Products = () => {
                     <div className="row">
                       {products.map((product) => (
                         <div className="col-md-4 col-12 mb-4" key={product.id}>
-                          <div className="card h-100">
+                          <div className="card h-100 d-flex flex-column">
                             <a
                               href={product.link}
-                              className="text-decoration-none"
+                              className="text-decoration-none d-flex flex-column flex-grow-1"
                             >
-                              <img
-                                src={product.imageUrl}
-                                className="card-img-top"
-                                alt={product.name}
-                              />
-                              <div className="card-body">
-                                <h5 className="card-title">{product.name}</h5>
-                                <p className="card-text">
-                                  <span className="text-muted text-decoration-line-through">
-                                    {product.originalPrice}
-                                  </span>
-                                  <span className="text-danger">
-                                    {" "}
-                                    {product.discountedPrice}
-                                  </span>
-                                </p>
+                              <div className="image-container">
+                                <img
+                                  src={`/img/${product.id}.jpg`}
+                                  className="card-img-top"
+                                  alt={product.name}
+                                />
+                              </div>
+                              <div className="border-between"></div>
+                              <div className="card-body d-flex flex-column flex-grow-1">
+                                <h5 className="card-title text-center flex-grow-1 d-flex align-items-center justify-content-center">
+                                  {product.name}
+                                </h5>
                                 <Link
                                   to={`/products/${product.id}`}
-                                  className="btn btn-success"
+                                  className="btn btn-success mt-auto"
                                 >
                                   Details
                                 </Link>

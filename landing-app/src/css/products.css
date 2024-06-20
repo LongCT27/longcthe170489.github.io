@@ -1,0 +1,36 @@
+.image-container {
+    width: 100%;
+    padding-top: 100%; /* This creates a square container */
+    position: relative;
+    background-color: #f8f9fa; /* Solid background color */
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .border-between {
+    border-top: 1px solid #dee2e6; /* Border between image and title */
+    margin: 0 15px; /* Optional: to give some space around the border */
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-title {
+    text-align: center;
+    margin-bottom: 1rem; /* Optional: space between title and button */
+  }
+  
+  .btn-success {
+    margin-top: auto; /* Pins the button at the bottom */
+  }
+  

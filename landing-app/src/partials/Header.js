@@ -8,7 +8,7 @@ const Header = () => {
         <div className="col-md-3 d-flex align-items-center">
           <a href="/" className="logo">
             <img
-              src="https://tadahdiy.com/wp-content/uploads/2022/04/web-logo-tadah-.jpg"
+              src="/logo.png"
               className="img-fluid"
               alt="Tadahdiy"
             />
@@ -20,19 +20,7 @@ const Header = () => {
         <div className="col-md-9">
           <div className="row">
             <div className="col-md-7">
-              <form action="https://tadahdiy.com/" method="get" className="d-flex">
-                <input
-                  type="text"
-                  name="s"
-                  className="form-control form-control-sm"
-                  placeholder="Search..."
-                  aria-label="Search"
-                />
-                <button type="submit" className="btn btn-outline-secondary btn-sm ml-2">
-                  <i className="fa fa-search"></i>
-                </button>
-                <input type="hidden" name="post_type" value="product" />
-              </form>
+              
             </div>
             <div className="col-md-5 d-none d-lg-flex justify-content-end">
               <a href="/gio-hang" className="btn btn-link btn-sm">

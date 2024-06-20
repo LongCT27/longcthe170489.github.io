@@ -1,38 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "../partials/Navbar";
-
-const products = [
-  {
-    id: 1,
-    img: "/img/01.jpg",
-    name: "Product 01",
-  },
-  {
-    id: 2,
-    img: "/img/02.jpg",
-    name: "Product 02",
-  },
-  {
-    id: 3,
-    img: "/img/03.jpg",
-    name: "Product 03",
-  },
-  {
-    id: 4,
-    img: "/img/04.jpg",
-    name: "Product 04",
-  },
-  {
-    id: 5,
-    img: "/img/05.jpg",
-    name: "Product 05",
-  },
-  {
-    id: 6,
-    img: "/img/06.jpg",
-    name: "Product 06",
-  },
-];
+import Featured from "../data/featured_products.json";
+import "../css/products.css"
 
 const Landing = () => {
   return (
@@ -62,28 +31,26 @@ const Landing = () => {
             <div className="title">
               <h1> Sản phẩm </h1>
             </div>
-            <hr/>
+            <hr />
             <div className="row">
-              {products.map((p) => (
-                <div className="col-md-4">
-                  <div className="item">
+              {Featured.map((p) => (
+                <div className="col-md-4 mb-4" key={p.id}>
+                  <div className="item d-flex flex-column h-100">
                     <a className="thumb" href={`/products/${p.id}`}>
-                      <img
-                        className="img-fluid"
-                        style={{
-                          width: 416,
-                          height: 416,
-                        }}
-                        src={p.img}
-                      />
+                      <div className="image-container">
+                        <img
+                          className="img-fluid"
+                          src={`/img/${p.id}.jpg`}
+                          alt={p.name}
+                        />
+                      </div>
                     </a>
-                    <div className="content mt-2">
-                      <h3>
-                        <Link to={`/products/${p.id}`}>
-                          {p.name}
-                        </Link>
+                    <div className="border-between"></div>
+                    <div className="content mt-2 d-flex flex-column flex-grow-1">
+                      <h3 className="text-center flex-grow-1 d-flex align-items-center justify-content-center">
+                        <Link className="text-decoration-none" to={`/products/${p.id}`}>{p.name}</Link>
                       </h3>
-                      <p className="link">
+                      <p className="link mt-2">
                         <Link
                           className="btn btn-primary"
                           to={`/products/${p.id}`}
@@ -99,16 +66,14 @@ const Landing = () => {
           </div>
         </div>
       </div>
-      <hr/>
+      <hr />
       <div className="news_home">
         <div className="container container-fluid">
           <div className="title text-center mb-4">
             <h2>Video</h2>
           </div>
           <div className="row justify-content-center mb-10">
-            <div className="col-md-10">
-              
-            </div>
+            <div className="col-md-10"></div>
           </div>
         </div>
       </div>

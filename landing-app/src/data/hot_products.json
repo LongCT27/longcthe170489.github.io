@@ -1,14 +1,18 @@
 [
     {
-        "id": 0,
-        "name": "Item #1",
-        "price": "45,000₫",
-        "img": "/products/item1.jpg"
-    },
-    {
         "id": 1,
-        "name": "Item #2",
-        "price": "55,000₫",
-        "img": "/products/item1.jpg"
-    }
+        "name": "Bộ Kit Đèn Ông Sao"
+      },
+      {
+        "id": 2,
+        "name": "Bộ Kit Hello Kitty"
+      },
+      {
+        "id": 3,
+        "name": "KIT LÀM TRANH HOA HƯỚNG DƯƠNG THỦ CÔNG"
+      },
+      {
+        "id": 4,
+        "name": "Bộ Kit Ô tô"
+      }
 ]

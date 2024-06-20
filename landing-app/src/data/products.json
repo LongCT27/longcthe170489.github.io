@@ -1,51 +1,27 @@
 [
     {
       "id": 1,
-      "name": "Bộ Kit Đèn Ông Sao",
-      "originalPrice": "220,000₫",
-      "discountedPrice": "129,000₫",
-      "imageUrl": "https://tadahdiy.com/wp-content/uploads/2022/08/khungngang-scaled.jpg",
-      "link": "https://tadahdiy.com/san-pham/bo%cc%a3-kit-den-ong-sao/"
+      "name": "Bộ Kit Đèn Ông Sao"
     },
     {
       "id": 2,
-      "name": "Product 2",
-      "originalPrice": "300,000₫",
-      "discountedPrice": "200,000₫",
-      "imageUrl": "https://via.placeholder.com/150",
-      "link": "https://example.com/product2"
+      "name": "Bộ Kit Hello Kitty"
     },
     {
       "id": 3,
-      "name": "Product 3",
-      "originalPrice": "150,000₫",
-      "discountedPrice": "100,000₫",
-      "imageUrl": "https://via.placeholder.com/150",
-      "link": "https://example.com/product3"
+      "name": "KIT LÀM TRANH HOA HƯỚNG DƯƠNG THỦ CÔNG"
     },
     {
       "id": 4,
-      "name": "Product 4",
-      "originalPrice": "500,000₫",
-      "discountedPrice": "350,000₫",
-      "imageUrl": "https://via.placeholder.com/150",
-      "link": "https://example.com/product4"
+      "name": "Bộ Kit Ô tô"
     },
     {
       "id": 5,
-      "name": "Product 5",
-      "originalPrice": "450,000₫",
-      "discountedPrice": "300,000₫",
-      "imageUrl": "https://via.placeholder.com/150",
-      "link": "https://example.com/product5"
+      "name": "Bộ Kit Ống Heo Tiết Kiệm"
     },
     {
       "id": 6,
-      "name": "Product 6",
-      "originalPrice": "600,000₫",
-      "discountedPrice": "400,000₫",
-      "imageUrl": "https://via.placeholder.com/150",
-      "link": "https://example.com/product6"
+      "name": "Bộ Kit Đèn Ông Sao"
     }
   ]
   
